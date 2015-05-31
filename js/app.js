@@ -49,5 +49,5 @@ var myRevealingModule = (function () {
 })();
  
  $(document).ready(function(){
-  myRevealingModule.start();
+ // myRevealingModule.start();
 });

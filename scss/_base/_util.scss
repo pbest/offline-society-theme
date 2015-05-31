@@ -72,3 +72,63 @@
   -o-animation:      fadeDown 0.5s ease-out; /* Opera 12+ */
   animation:         fadeDown 0.5s ease-out; /* IE 10+, Fx 29+ */
 }
+
+@-webkit-keyframes fadeRight {
+  0%   { 
+    opacity: 0;
+    -webkit-transform: translateX(1rem);
+    -moz-transform: translateX(1rem);
+     transform: translateX(1rem);  
+  }
+  100% { 
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+     transform: translateX(0px); 
+  }
+}
+
+@-moz-keyframes fadeRight {
+  0%   { 
+    opacity: 0;
+    -webkit-transform: translateX(-1rem);
+    -moz-transform: translateX(-1rem);
+     transform: translateX(-1rem);  
+  }
+  100% { 
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+     transform: translateX(0px); 
+  }
+}
+
+@-o-keyframes fadeRight {
+  0%   { 
+    opacity: 0;
+    -webkit-transform: translateX(-1rem);
+    -moz-transform: translateX(-1rem);
+     transform: translateX(-1rem);  
+  }
+  100% { 
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+     transform: translateX(0px); 
+  }
+}
+
+@keyframes fadeRight {
+  0%   { 
+    opacity: 0;
+    -webkit-transform: translateX(-1rem);
+    -moz-transform: translateX(-1rem);
+     transform: translateX(-1rem);  
+  }
+  100% { 
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+     transform: translateX(0px); 
+  }
+}

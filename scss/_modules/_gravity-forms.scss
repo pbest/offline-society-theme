@@ -6,72 +6,7 @@
   margin-top: 2.5rem;
 }
 
-@-webkit-keyframes fadeDown {
-  0%   { 
-    opacity: 0;
-    -webkit-transform: translateY(-1rem);
-    -moz-transform: translateY(-1rem);
-     transform: translateY(-1rem);  
-  }
-  100% { 
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-     transform: translateY(0px); 
-  }
-}
 
-@-moz-keyframes fadeDown {
-  0%   { 
-    opacity: 0;
-    -webkit-transform: translateY(-1rem);
-    -moz-transform: translateY(-1rem);
-     transform: translateY(-1rem);  
-  }
-  100% { 
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-     transform: translateY(0px);  
-  }
-}
-
-@-o-keyframes fadeDown {
-  0%   { 
-    opacity: 0;
-    -webkit-transform: translateY(-1rem);
-    -moz-transform: translateY(-1rem);
-     transform: translateY(-1rem); 
-  }
-  100% { 
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-     transform: translateY(0px);   
-  }
-}
-
-@keyframes fadeDown {
-  0%   { 
-    opacity: 0;
-    -webkit-transform: translateY(-1rem);
-    -moz-transform: translateY(-1rem);
-     transform: translateY(-1rem); 
-  }
-  100% { 
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-     transform: translateY(0px);  
-  }
-}
-
-.animatedFormWrapper {
-  -webkit-animation: fadeDown 0.5s ease-out; /* Safari 4+ */
-  -moz-animation:    fadeDown 0.5s ease-out; /* Fx 5+ */
-  -o-animation:      fadeDown 0.5s ease-out; /* Opera 12+ */
-  animation:         fadeDown 0.5s ease-out; /* IE 10+, Fx 29+ */
-}
 
 
 #gform_1 {
@@ -103,18 +38,49 @@
   }
 }
 
+.gfield_error {
+  position: relative;
+}
 
-.validation_error, .validation_message{
-  background: rgba($red,.05);
-  border: 1px solid rgba($red,.15);
+.validation_message{
+  background: rgba(32, 120, 170,.07);
+  border: 1px solid rgba(32, 120, 170,1);
 
   padding: .5rem 1rem;
   display: inline-block;
-  color: $red;
+  color: rgba(32, 120, 170,1);
+    position: absolute;
+  z-index: 999999;
+  top: 0;
+  right: 0;
+  display: inline-block;
+   -webkit-animation: fadeRight 0.35s ease-out; /* Safari 4+ */
+  -moz-animation:    fadeRight 0.35s ease-out; /* Fx 5+ */
+  -o-animation:      fadeRight 0.35s ease-out; /* Opera 12+ */
+  animation:         fadeRight 0.35s ease-out; /* IE 10+, Fx 29+ */
 }
 
+.validation_error {
+  display: none;
+}
 /*good css
 ---------- */
+
+.gfield {
+  margin-bottom: 2rem;
+  overflow: auto;
+}
+
+.gfield_label{
+    //font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: $red;
+    margin-bottom: 0;
+  }
+
 .gfield_checkbox, .gfield_radio {
 
   list-style: none;
@@ -128,10 +94,7 @@
   }
 }
 
-.gfield {
-  margin-bottom: 2rem;
-  overflow: auto;
-}
+
 
 .gform_hidden {
   margin: 0;
@@ -162,6 +125,11 @@
 
   .ginput_container span {
     position: relative;
+  }
+
+  input[type=text], input[type=tel] {
+    width: 75%;
+    margin-bottom: 1px;
   }
 }
 
@@ -384,18 +352,43 @@ label.gfield_label[for=input_1_3_3],label.gfield_label[for=input_1_2] {
     opacity: 1; // Green check mark
 }
 
-/* Dating Preferences
+/* Page 2 - Dating Preferences
 ------------------------------------------------- */
-#gform_page_4_2 .gfield_label{
-  font-size: 1.5rem;
-  font-weight: 300;
+#gform_page_4_2 {
+
+  .gfield {
+    width: 50%;
+    float: left;
+  }
+
+  .gfield_label {
+    //font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .75rem;
+    color: $red;
+    margin-bottom: 0;
+  }
+
+  #field_4_20 {
+    width: 100%;
+    margin-top: 15px;
+  }
+
 }
+
 
 .gfield_checkbox li {
   margin-right: 3rem;
 }
 
-/* Submit 
+
+.form__optionalLabel {
+  color: $red-gray;
+}
+
+/* Page 4 - Submit 
 ------------------------------------------------- */
 .radio-button .ginput_price {
     display: none;
@@ -472,69 +465,204 @@ label.gfield_label[for=input_1_3_3],label.gfield_label[for=input_1_2] {
  .ginput_card_expiration {
   width: 45%;
  }
- /*.label-float {
-  position: relative;
 
-  .ginput_container span {
-    position: relative;
+
+.gcolumn-50 {
+  width: 50%;
+  float: left;
+}
+
+#gform_fields_4_3, #gform_fields_4_3_column-2 {
+  width: 100%;
+  overflow: auto;
+  .gfield {
+    width: 50%;
+    float: left;
   }
 }
 
-.label-float label {
-  @include transition(all, 0.2s, ease-in-out);
-  position: absolute;
-  top: .75rem;
-  left: 2rem;
-  //opacity: .5;
-  color: $red;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-/*.radio-button {
-  margin: 10px 0;
+/* Pretty Radio Options
+------------------------------------------------- */
+.field__radio {
+  position: relative;
+  cursor: pointer;
 
-  .ginput_price {
+  li {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin-bottom: 3px;
+    overflow: auto;
+  }
+
+  [type="radio"]:not(:checked) + label,
+  [type="radio"]:checked + label {
+    position: relative;
+    padding-left: 40px;
+    padding-top: 3px; 
+    cursor: pointer;
+    color: $dark-gray;
+    transition: all .2s;
+    &:hover {
+      color: $black;
+      transition: all .2s;
+    }
+  }
+
+  [type="radio"]:not(:checked),
+  [type="radio"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+
+  /* checkbox aspect */
+  [type="radio"]:not(:checked) + label:before,
+  [type="radio"]:checked + label:before,
+   {
+    content: '';
+    position: absolute;
+    left:0; top: 2px;
+    width: 31px; height: 31px;
+    background: #f7f7f7;
+    border-radius: 50%;
+    color: rgba($white,.7);
+    font-size: 11px;
+    padding-left: 10px;
+    padding-top: 3px;
+    transform: scale(.80);
+     transition: all .2s;
+  }
+
+  [type="radio"]:checked + label:before {
+    content:'\002713';
+    //color: $white;
+    font-family: "SSStandard" !important;
+    background: $red;
+    opacity: 1;
+    transition: all .2s;
+    transform: scale(1);
+  }
+}
+
+#choice_4_41_4:not(:checked) + #input_4_41_other,
+#choice_4_41_4:checked + #input_4_41_other
+{
+    //margin-left: 40px;
+    padding: 2rem;
+}
+
+#choice_4_41_4:checked + #input_4_41_other
+{
+  border-color: $red;
+}
+
+/* Pretty Checkbox Options
+------------------------------------------------- */
+.field__checkbox {
+  position: relative;
+  cursor: pointer;
+
+  li {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin-bottom: 3px;
+    overflow: auto;
+  }
+
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 40px;
+    padding-top: 3px; 
+    cursor: pointer;
+    color: $dark-gray;
+  }
+
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+
+  /* checkbox aspect */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left:0; top: 2px;
+    width: 31px; height: 31px;
+    background: #f7f7f7;
+    border-radius: 50%;
+    color: rgba($white,.7);
+    font-size: 11px;
+    padding-left: 10px;
+    padding-top: 3px;
+    transform: scale(.80);
+     transition: all .2s;
+  }
+
+  [type="checkbox"]:checked + label:before {
+    content:'\002713';
+    //color: $white;
+    font-family: "SSStandard" !important;
+    background: $red;
+    opacity: 1;
+    transition: all .2s;
+    transform: scale(1);
+  }
+
+}
+
+/* Pretty Toggle
+------------------------------------------------- */
+.field__toggle {
+  li {
+    display: inline-block;
+    width: 75px;
+    padding: 2px;
+    border: 3px solid #f7f7f7;
+    border-radius: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  li input[type="checkbox"] {
     display: none;
   }
-
-  .gfield_radio li {
-    float: left;
-    clear: none;
-    width: 50%;
+  li input[type="checkbox"]:checked + label {
+    margin-left: 0;
+    background: $red;
   }
-
-  .gfield_radio li:first-child {
-    padding-right: 10px;
+  li label {
+    width: 23px;
+    height: 23px;
+    background: $red-gray;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin-left: 37px;
+    margin-top: 4px;
+    transition: all 0.3s ease;
   }
-
-  .gfield_radio li:last-child {
-    padding-left: 10px;
+  li label::before {
+    content: "No";
+    color: $dark-gray;
+    top: 3px;
+    left: -30px;
+  }
+  li label::after {
+    content: "Yes";
+    color: $dark-gray;
+    right: -30px;
+  }
+  li label::before,
+  li label::after {
+    position: absolute;
+    display: inline-block;
+    width: 28px;
+    text-align: center;
+    line-height: 18px;
   }
 }
-
-.radio-button input[type="radio"] {
-  display: none;
-}
-
-.radio-button label {
-  width: 100%;
-  background-color: #dadada;
-  padding: 10px;
-  margin: 0;
-}
-
-.radio-button input[type=radio]:checked + label {
-  background-color: #61CCFF;
-  color: #fafaf4;
-}
-
-/* Foundation overrides *
-.row {
-  padding: 0 20px;
-}
-
-input[type="checkbox"] + label, input[type="radio"] + label {
-  margin: 0;
-}*/
