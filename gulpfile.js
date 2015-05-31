@@ -1,6 +1,17 @@
 // Include gulp
 var gulp = require('gulp'); 
 
+
+// sudo npm install gulp-jshint --save-dev
+// sudo npm install gulp-sass --save-dev
+// sudo npm install gulp-concat --save-dev
+// sudo npm install gulp-uglify --save-dev
+// sudo npm install gulp-minify-css --save-dev
+// sudo npm install gulp-sourcemaps --save-dev
+// sudo npm install gulp-plumber --save-dev
+// sudo npm install gulp-rename --save-dev
+
+
 // Include Our Plugins
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
