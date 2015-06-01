@@ -48,25 +48,42 @@
   max-width: 65%;
 }
 
+.landing__taglineButton {
+  //border-color: $black !important;
+}
 /* 
+
   Nav Off Canvas
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .home {
+  
+  .nav-main {
+
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    padding-left: 40px;
+    padding-right: 40px;
+
+  }
 
   .logo {
-     -webkit-transform: translateY(-120%);
-     -ms-transform: translateY(-120%);
-      transform: translateY(-120%);
+    display: none;
   }
 
-  .nav-item {
-     -webkit-transform: translateY(-120%);
-     -ms-transform: translateY(-120%);
-      transform: translateY(-120%);
+  .nav-item a {
+     color: #ccc;
+     font-size: 12px;
+     opacity: 0;
   }
+
 
   .nav .btn-secondary {
-    border-color: $white;
+    
+    @media screen and (min-width: 1024px) {
+      border-color: $white;
+    }
 
     &:hover {
       border-color: $red;

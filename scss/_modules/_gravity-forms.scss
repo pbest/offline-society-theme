@@ -6,28 +6,61 @@
   margin-top: 2.5rem;
 }
 
-
-
-
 #gform_1 {
   max-width: 700px;
 }
 
 .gform_fields {
-  //@include grid-container;
-  //@include grid-nested;
   list-style: none;
-  //padding-bottom: 3rem;
 }
 
+.gfield {
+  margin-bottom: 2rem;
+  overflow: auto;
+}
 
-
-#gform_submit_button_1 {
-    //float: right;
-    margin-right: 2.5%;
-    //margin-left: 5%;
-    width: 100%;
+.gfield_label{
+    //font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: $red;
+    margin-bottom: 0;
   }
+
+.gfield-50 {
+  float: left;
+  width: 50%;
+}
+
+.gform_page_footer {
+  width: 100%;
+  clear: both;
+  margin-top: 4rem;
+}
+
+.gfield_required {
+  display: none; 
+}
+
+.ginput_container .large {
+  width: 100%;
+}
+
+.gfield_checkbox, .gfield_radio {
+
+  list-style: none;
+
+  li label, li input {
+    float: left;
+  }
+}
+
+.gform_hidden {
+  margin: 0;
+  padding: 0;
+}
 
 
 .form__50 .ginput_container {
@@ -38,6 +71,43 @@
   }
 }
 
+
+/*
+Red Label inset into all text inputs
+------------------------------------------------------------- */
+.label-float {
+  position: relative;
+
+  .ginput_container span {
+    position: relative;
+  }
+
+  input[type=text], input[type=tel] {
+    margin-bottom: 1px;
+  }
+}
+
+.label-float label {
+  @include transition(all, 0.2s, ease-in-out);
+  position: absolute;
+  top: .75rem;
+  left: 2rem;
+  //opacity: .5;
+  color: $red;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+label.curFocus {
+  @include transition(all, 0.2s, ease-in-out);
+  color: $red !important;
+  //opacity: 1;
+}
+
+/* Form Validation
+----------------------------------------------------------- */
 .gfield_error {
   position: relative;
 }
@@ -86,93 +156,18 @@
 .validation_error {
   display: none;
 }
-/*good css
----------- */
 
-.gfield {
-  margin-bottom: 2rem;
-  overflow: auto;
-}
 
-.gfield_label{
-    //font-size: 1.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 12px;
-    color: $red;
-    margin-bottom: 0;
+/*
+-------------------------------------------------
+USER REGISTRATION FORM
+------------------------------------------------- */
+#gform_submit_button_1 {
+    //float: right;
+    margin-right: 2.5%;
+    //margin-left: 5%;
+    width: 100%;
   }
-
-.gfield_checkbox, .gfield_radio {
-
-  list-style: none;
-
-  li {
-    //clear: both;
-  }
-
-  li label, li input {
-    float: left;
-  }
-}
-
-
-
-.gform_hidden {
-  margin: 0;
-  padding: 0;
-}
-
-.gfield-50 {
-  float: left;
-  width: 50%;
-}
-
-.gform_page_footer {
-  width: 100%;
-  clear: both;
-  margin-top: 4rem;
-}
-
-.gfield_required {
-  display: none; 
-}
-
-.ginput_container .large {
-  width: 100%;
-}
-
-.label-float {
-  position: relative;
-
-  .ginput_container span {
-    position: relative;
-  }
-
-  input[type=text], input[type=tel] {
-    margin-bottom: 1px;
-  }
-}
-
-.label-float label {
-  @include transition(all, 0.2s, ease-in-out);
-  position: absolute;
-  top: .75rem;
-  left: 2rem;
-  //opacity: .5;
-  color: $red;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-label.curFocus {
-  @include transition(all, 0.2s, ease-in-out);
-  color: $red !important;
-  //opacity: 1;
-}
 
 
 /*
@@ -189,8 +184,7 @@ MEMBERSHIP APPLICATION FORM
   padding-bottom: 1rem;
 }
 
-/* field specific UI hacks
------------------------- */
+
 .name_first input, .name_last input {
   width: 100%;
 }
@@ -238,7 +232,8 @@ label.gfield_label[for=input_1_3_3],label.gfield_label[for=input_1_2] {
 }
 
 
-// ------------------------ 
+/* Page Progress / Current page indicator
+--------------------------------------------------------- */
 
 .gf_page_steps {
   width: 96%;
@@ -256,11 +251,7 @@ label.gfield_label[for=input_1_3_3],label.gfield_label[for=input_1_2] {
   color: #ccc;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-  //text-align: center;
 
-  i {
-    //float: left;
-  }
   .gf_step_circle {
     //left: 50%;
   }
@@ -271,13 +262,13 @@ label.gfield_label[for=input_1_3_3],label.gfield_label[for=input_1_2] {
 }
 
 .gf_step_clear:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0;
+}
 
 .gf_step_first {
   text-align: left;
@@ -288,7 +279,6 @@ label.gfield_label[for=input_1_3_3],label.gfield_label[for=input_1_2] {
 }
 
 .gf_step_last {
-  //text-align: right;
 
   .gf_step_label {
     border-bottom: 0;
@@ -312,7 +302,6 @@ label.gfield_label[for=input_1_3_3],label.gfield_label[for=input_1_2] {
 
 .gf_step_name { // step label
   display: block;
-  //color: $black;
   margin-top: -0.5rem;
   padding-bottom: .5rem;
   font-family: map-get($bodytype, font-family);
@@ -397,9 +386,7 @@ label.gfield_label[for=input_1_3_3],label.gfield_label[for=input_1_2] {
     width: 75%;
     margin-top: 15px;
   }
-
 }
-
 
 .gfield_checkbox li {
   margin-right: 3rem;
@@ -423,56 +410,54 @@ input[type=text], input[type=tel] {
 ------------------------------------------------- */
 .radio-button .ginput_price {
     display: none;
-  }
+}
 
- #field_4_31 label {
+#field_4_31 label {
   display: none;
- } 
+} 
 
- #input_4_22_1 {
+#input_4_22_1 {
   width: 100%;
- }
+}
 
- #input_4_22_5 {
+#input_4_22_5 {
   width: 100%;
- }
+}
 
- #input_4_22_1_label, #input_4_22_5_label {
+#input_4_22_1_label, #input_4_22_5_label {
   @include transition(all, 0.2s, ease-in-out);
   position: relative;
   top: 3rem;
   left: 1rem;
-  //opacity: .5;
   color: $red;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 1px;
-
- }
+}
 
 .ginput_cardinfo_left {
   float: left;
   width: 30%;
   background-color: #F7F7F7;
   margin-top: 20px;
- }
+}
 
- .ginput_cardinfo_right {
+.ginput_cardinfo_right {
   padding-left: 4rem;
   width: 60%;
   float: left;
   text-align: right;
- }
+}
 
- .ginput_cardinfo_right:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
+.ginput_cardinfo_right:after {
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0;
+  }
 
  label[for=input_4_22_2_month] {
   color: $red;
@@ -488,7 +473,6 @@ input[type=text], input[type=tel] {
  .ginput_card_expiration {
   width: 45%;
  }
-
 
 .gcolumn-50 {
   width: 50%;
@@ -506,10 +490,10 @@ input[type=text], input[type=tel] {
 }
 
 #input_4_32 {
-
   li {
     margin-bottom: 10px;
   }
+
   label {
     font-size: 1.35rem;
   }
@@ -529,19 +513,25 @@ input[type=text], input[type=tel] {
 }
 
 #field_4_33 label {
-  left: 1.5rem;
-  top: .45rem;
+  left: 1.3rem;
+  top: 45px;
   font-size: 10px;  
 }
 
 // Coupon section
+#field_4_33 {
+  float: left;
+  width: 35%;
+  padding-top: 40px;
+}
+
 #gf_coupon_code_4 {
   padding: 1.75rem;
   padding-left: 1.45rem;
   padding-top: 2.75rem;
-  width: 30%;
+  width: 65%;
   @media screen and (max-width:767px) {
-    width: 50%;
+   // width: 50%;
   }
 }
 
@@ -556,14 +546,25 @@ input[type=text], input[type=tel] {
   font-size: 12px;
  }
 
+.gform_wrapper #gf_coupon_info .gf_coupon_item td {
+  border-bottom: 0px !important;
+}
 
  .gform_card_icon_container {
     display: none;
  }
 
- label[for=input_4_22_1] {
-  
- }
+// price options
+.gfield_price {
+  width: 65%;
+  float: left;
+}
+
+// price field
+#field_4_30 {
+  clear: both;
+  width: 100%;
+}
 
 /* Pretty Radio Options
 ------------------------------------------------- */
@@ -628,10 +629,11 @@ input[type=text], input[type=tel] {
   }
 }
 
+/* "Other" option for "How Did you hear about us?" section
+-------------------------------------------------------- */
 #choice_4_41_4:not(:checked) + #input_4_41_other,
 #choice_4_41_4:checked + #input_4_41_other
 {
-    //margin-left: 40px;
     padding: 2rem;
 }
 
