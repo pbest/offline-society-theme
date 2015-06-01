@@ -43,8 +43,8 @@
 }
 
 .validation_message{
-  background: rgba(32, 120, 170,.07);
-  border: 1px solid rgba(32, 120, 170,1);
+  background: #eff5f8;
+  border: 1px solid #2078aa;
 
   padding: .5rem 1rem;
   display: inline-block;
@@ -60,6 +60,29 @@
   animation:         fadeRight 0.35s ease-out; /* IE 10+, Fx 29+ */
 }
 
+.validation_message:after, .validation_message:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.validation_message:after {
+ border-color: rgba(239, 245, 248, 0);
+  border-right-color: #eff5f8;
+  border-width: 7px;
+  margin-top: -7px;
+}
+.validation_message:before {
+  border-color: rgba(32, 120, 170, 0);
+  border-right-color: #186d9d;
+  border-width: 8px;
+  margin-top: -8px;
+}
 .validation_error {
   display: none;
 }
@@ -128,7 +151,6 @@
   }
 
   input[type=text], input[type=tel] {
-    width: 75%;
     margin-bottom: 1px;
   }
 }
@@ -372,7 +394,7 @@ label.gfield_label[for=input_1_3_3],label.gfield_label[for=input_1_2] {
   }
 
   #field_4_20 {
-    width: 100%;
+    width: 75%;
     margin-top: 15px;
   }
 
@@ -386,6 +408,15 @@ label.gfield_label[for=input_1_3_3],label.gfield_label[for=input_1_2] {
 
 .form__optionalLabel {
   color: $red-gray;
+}
+
+/* Page 3 - Basic Info
+------------------------------------------------- */
+#gform_page_4_3 {
+input[type=text], input[type=tel] {
+    width: 75%;
+    margin-bottom: 1px;
+  }
 }
 
 /* Page 4 - Submit 

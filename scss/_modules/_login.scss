@@ -154,3 +154,74 @@ label[for=user_login], label[for=user_pass] {
     color: $red;
   }
 }
+
+
+.forgetmenot {
+  position: relative;
+  cursor: pointer;
+
+  [type="checkbox"] {
+    background: #ffffff;
+    border: 0;
+   }
+  
+
+  label,
+  label {
+    position: relative;
+    padding-left: 35px;
+    padding-top: 6px; 
+    cursor: pointer;
+    color: $dark-gray;
+  }
+
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    //position: absolute;
+    //left: -9999px;
+    //opacity: 0;
+  }
+
+  /* checkbox aspect */
+  [type="checkbox"]:before {
+    content: '';
+    position: absolute;
+    left:0; 
+    top: 2px;
+    width: 31px; 
+    height: 31px;
+    background: #f7f7f7;
+    border-radius: 50%;
+    color: rgba($white,.7);
+    font-size: 11px;
+    padding-left: 10px;
+    padding-top: 3px;
+    transform: scale(.80);
+     transition: all .2s;
+  }
+
+  [type="checkbox"]:checked:before {
+    content:'\002713';
+    color: rgba($white,.7);
+    width: 31px; 
+    height: 31px;
+    font-family: "SSStandard" !important;
+    background: $red;
+    opacity: 1;
+    padding-left: 0px;
+    padding-top: 10px;
+    font-size: 11px;  
+    transition: all .2s;
+    transform: scale(1);
+  }
+}
+
+.login .message {
+   background: #eff5f8;
+  border: 1px solid #2078aa;
+  line-height: 1.35;
+  margin-top: 20px;
+  padding: .5rem 1rem;
+  display: inline-block;
+  color: rgba(32, 120, 170,1);
+}
