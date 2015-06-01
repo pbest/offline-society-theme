@@ -10,7 +10,14 @@
           <a class="btn btn-secondary landing__taglineButton" href="./events/">Attend our Launch Event</a>
       </div>
   </div>
-  <div class="landing__block landing__photo">
+  <div class="landing__block landing__video" id="video_background">
+  
+        <video id="theVideo" autoplay="true" poster="<?php bloginfo('template_url'); ?>/assets/img/poster.jpg" preload="auto" loop><!-- Default video source: -->
+       <source src="{{site.theme.link}}/video/offline_homepage.mp4" type="video/mp4">
+        <!--<source src="video/puesto/puesto-v1.webm" type="video/webm"><!--<source type="video/ogg" src="video/puesto/puesto-v1.ogg">-->
+        </video> <!--
+                Buttons or metadata go here
+              -->
   </div>
    
 </section>

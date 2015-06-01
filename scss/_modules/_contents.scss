@@ -16,3 +16,14 @@
   padding-right: 5%;
 }
 
+.article-body {
+  margin-top: 3rem;
+
+  p {
+    font-size: 1.25rem;
+    color: $black;
+    opacity: .51;
+    max-width: 650px;
+  }
+}
+
