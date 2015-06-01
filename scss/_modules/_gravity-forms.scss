@@ -365,7 +365,7 @@ label.gfield_label[for=input_1_3_3],label.gfield_label[for=input_1_2] {
 .gf_step_completed_indicator {
   opacity: 0;
   display: none;
-  color: #68CF87;
+  color: $green;
   margin-left: 4px;
 }
 
@@ -428,14 +428,6 @@ input[type=text], input[type=tel] {
  #field_4_31 label {
   display: none;
  } 
-
-.gform_wrapper input#gf_coupon_button.button {
-  height: 5.1rem;
-  margin-top: 0;
-  margin-left: 0 !important;
-  position: relative;
-  top: -11px;
- }
 
  #input_4_22_1 {
   width: 100%;
@@ -503,6 +495,7 @@ input[type=text], input[type=tel] {
   float: left;
 }
 
+
 #gform_fields_4_3, #gform_fields_4_3_column-2 {
   width: 100%;
   overflow: auto;
@@ -511,6 +504,66 @@ input[type=text], input[type=tel] {
     float: left;
   }
 }
+
+#input_4_32 {
+
+  li {
+    margin-bottom: 10px;
+  }
+  label {
+    font-size: 1.35rem;
+  }
+
+  .ginput_price {
+    display: none;
+  }
+}
+
+#field_4_30, #field_4_22 {
+  overflow: hidden;
+}
+
+.ginput_total {
+  color: $green;
+  font-size: 2rem;
+}
+
+#field_4_33 label {
+  left: 1.5rem;
+  top: .45rem;
+  font-size: 10px;  
+}
+
+// Coupon section
+#gf_coupon_code_4 {
+  padding: 1.75rem;
+  padding-left: 1.45rem;
+  padding-top: 2.75rem;
+  width: 30%;
+  @media screen and (max-width:767px) {
+    width: 50%;
+  }
+}
+
+.gform_wrapper input#gf_coupon_button.button {
+  height: 4.5rem;
+  margin-top: 0;
+  margin-left: 0 !important;
+  position: relative;
+  top: -8px;
+  padding-left: .95rem;
+  padding-right: .95rem;
+  font-size: 12px;
+ }
+
+
+ .gform_card_icon_container {
+    display: none;
+ }
+
+ label[for=input_4_22_1] {
+  
+ }
 
 /* Pretty Radio Options
 ------------------------------------------------- */
