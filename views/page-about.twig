@@ -1,0 +1,41 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper animatedWrapper">
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="article-content">
+				<h1 class="article-h1">{{title}}</h1>
+				<div class="article-body">
+					{{post.content}}
+				</div>
+				<!--<h1>Why Join?</h1>-->
+				<div class="sectionHeader">Access to Offline Society Events</div>
+				<ul class="benefitList">
+					<li class="benefitList__benefit">Monthly themed parties complimentary for members</li>
+					<li class="benefitList__benefit">Invitations to premium experiences with a hand-picked group of members, carefully selected to mix well together at the event. And, if all goes well, beyond the event.</li>
+				</ul>
+
+				<div class="sectionHeader">The Offline Society Membership Card <span class="smallGray">(coming soon)</span></div>
+				<ul class="benefitList">
+					<li class="benefitList__benefit">Perks and surprises throughout the year</li>
+				</ul>
+
+				<div class="pricePoint pricePoint-first">
+					<div class="sectionHeader">Pay Monthly</div>
+					<h2>$19.99/month</h2>
+				</div>
+
+				<div class="pricePoint pricePoint-last">
+					<div class="sectionHeader">Pay Upfront</div>
+					<h2>15% discount</h2>
+				</div>
+				<div class="clearfix"></div>
+
+				<section class="center pricePointContain">
+					<a class="btn btn-primary" href="{{site.url}}/join/">Start your application today</a>
+				</section>
+				
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

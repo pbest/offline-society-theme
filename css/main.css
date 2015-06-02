@@ -93,6 +93,20 @@ SAMPLE CSS OUTPUT:
 .pull-left {
   float: left; }
 
+.center {
+  text-align: center; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  display: inline-block; }
+
 @-webkit-keyframes fadeDown {
   0% {
     opacity: 0;
@@ -2300,26 +2314,37 @@ label[for=user_login], label[for=user_pass] {
   width: 50%;
   height: 100%;
   float: left;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   @media screen and (max-width: 1023px) {
     .landing__block {
       width: 100%; } }
+
+.landing__center {
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%); }
 
 .landing__photo {
   background-image: url("../img/homepage_placeholder.jpg");
   background-size: 105%,50%; }
 
-.no-touch .landing__video > video {
+.landing__video {
+  overflow: hidden; }
+
+.full_video {
+  position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: -40%;
+  width: auto;
   height: 100%;
   object-fit: cover; }
 
 .landing__logo {
   width: 53%;
-  max-width: 384px;
-  margin-top: 6rem; }
+  max-width: 384px; }
 
 .landing__taglineBlock {
   margin-top: 4rem; }
@@ -2332,6 +2357,13 @@ label[for=user_login], label[for=user_pass] {
   margin-right: auto;
   margin-left: auto;
   max-width: 65%; }
+
+.landing__taglinesubLink {
+  color: #7d7d7d;
+  margin-top: 1rem;
+  display: inline-block;
+  padding-left: 7px;
+  padding-right: 7px; }
 
 /* 
 
@@ -2386,8 +2418,19 @@ label[for=user_login], label[for=user_pass] {
     .content-wrapper {
       margin-left: 17%; } }
 
+.smallGray {
+  color: #ccc;
+  font-size: 90%;
+  padding-left: 3px;
+  padding-right: 3px; }
+
 .article-h1 {
   padding-right: 5%; }
+
+@media screen and (min-width: 1024px) {
+  .post-type-page .article-h1 {
+    margin-top: 5rem;
+    margin-left: -22%; } }
 
 .article-body {
   margin-top: 3rem; }
@@ -2396,6 +2439,62 @@ label[for=user_login], label[for=user_pass] {
     color: #000000;
     opacity: .51;
     max-width: 650px; }
+
+.sectionHeader {
+  color: #EB4147;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+  padding-bottom: 1rem; }
+
+.benefitList {
+  list-style: none; }
+
+.benefitList__benefit {
+  position: relative;
+  font-size: 1.25rem;
+  color: #000000;
+  opacity: .51;
+  max-width: 650px;
+  margin-bottom: 2rem;
+  padding-left: 40px; }
+  .benefitList__benefit:before {
+    content: '\002713';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    font-family: "SSStandard" !important;
+    color: #ccc;
+    opacity: 1;
+    transition: all 0.2s;
+    transform: scale(1);
+    padding-right: 10px;
+    height: 100%; }
+
+.pricePoint {
+  width: 40%;
+  float: left;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  margin-top: 2rem; }
+
+.pricePoint-first {
+  margin-right: 2.5%; }
+
+.pricePoint-last {
+  margin-left: 2.5%; }
+
+.pricePointContain {
+  width: 85%;
+  padding-top: 2rem; }
+  .pricePointContain a {
+    position: relative;
+    top: 40px; }
 
 .footer {
   width: 100%;

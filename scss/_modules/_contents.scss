@@ -11,9 +11,23 @@
   }
 }
 
+.smallGray {
+  color: #ccc;
+  font-size: 90%;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
 .article-h1 {
   //margin-left: 5%;
   padding-right: 5%;
+}
+
+.post-type-page .article-h1 {
+  @media screen and (min-width: 1024px){
+    margin-top: 5rem;
+    margin-left: -22%;
+  }
 }
 
 .article-body {
@@ -27,3 +41,72 @@
   }
 }
 
+.sectionHeader {
+  color: $red;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.benefitList {
+  list-style: none;
+}
+
+.benefitList__benefit {
+    position: relative;
+    font-size: 1.25rem;
+    color: $black;
+    opacity: .51;
+    max-width: 650px;
+    margin-bottom: 2rem;
+    padding-left: 40px;
+    //float: left;
+
+    &:before {
+    content:'\002713';
+    position: absolute;
+    left: 0;
+    top: 0;
+    //float: left;
+    height: 100%;
+    //color: $white;
+    font-family: "SSStandard" !important;
+    color: #ccc;
+    opacity: 1;
+    transition: all .2s;
+    transform: scale(1);
+    padding-right: 10px;
+    height: 100%;
+  }
+}
+
+.pricePoint {
+  width: 40%;
+  float: left;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+ .pricePoint-first {
+    margin-right: 2.5%;
+  }
+
+  .pricePoint-last {
+    margin-left: 2.5%;
+  }
+
+  .pricePointContain {
+    width: 85%;
+    padding-top: 2rem;
+
+    a {
+      position: relative;
+      top: 40px;
+    }
+  }

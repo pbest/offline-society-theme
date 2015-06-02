@@ -6,6 +6,20 @@
   float: left;
 }
 
+.center {
+  text-align: center;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+
 @-webkit-keyframes fadeDown {
   0%   { 
     opacity: 0;
