@@ -24,11 +24,13 @@
 }
 
 .landing__center {
-  position: absolute;
-  top: 47%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
+  @media screen and (min-width: 1024px) {
+    position: absolute;
+    top: 47%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+  }
 }
 
 .landing__photo {
@@ -53,7 +55,9 @@
 .landing__logo {
   width: 53%;
   max-width: 384px;
-  //margin-top: 6rem;
+  @media screen and (max-width:1023px) {
+    margin-top: 6rem;
+  }
 }
 
 .landing__taglineBlock {

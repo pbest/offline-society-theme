@@ -2320,12 +2320,13 @@ label[for=user_login], label[for=user_pass] {
     .landing__block {
       width: 100%; } }
 
-.landing__center {
-  position: absolute;
-  top: 47%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%); }
+@media screen and (min-width: 1024px) {
+  .landing__center {
+    position: absolute;
+    top: 47%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%); } }
 
 .landing__photo {
   background-image: url("../img/homepage_placeholder.jpg");
@@ -2346,6 +2347,9 @@ label[for=user_login], label[for=user_pass] {
 .landing__logo {
   width: 53%;
   max-width: 384px; }
+  @media screen and (max-width: 1023px) {
+    .landing__logo {
+      margin-top: 6rem; } }
 
 .landing__taglineBlock {
   margin-top: 4rem; }
