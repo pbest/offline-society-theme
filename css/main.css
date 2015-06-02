@@ -2332,7 +2332,8 @@ label[for=user_login], label[for=user_pass] {
   background-size: 105%,50%; }
 
 .landing__video {
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #ccc; }
 
 .full_video {
   position: absolute;
