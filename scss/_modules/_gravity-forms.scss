@@ -232,12 +232,21 @@ label.gfield_label[for=input_1_3_3],label.gfield_label[for=input_1_2] {
 }
 
 
-/* Page Progress / Current page indicator
+/* Steps : Page Progress / Current page indicator
 --------------------------------------------------------- */
 
 .gf_page_steps {
   width: 96%;
   max-width: 1240px;
+
+  &:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
 }
 
 .gf_step_number {
