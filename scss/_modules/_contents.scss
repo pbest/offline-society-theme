@@ -5,9 +5,12 @@
 .content-wrapper {
   @include prefix(30);
   padding-top: 10rem;
-
+  margin-right: 40px;
   @media screen and (max-width:1023px) {
     @include prefix(17);
+  }
+  @media screen and (max-width: 767px) {
+   margin-left: 50px;
   }
 }
 
@@ -18,9 +21,26 @@
   padding-right: 3px;
 }
 
+.RSVP_event {
+  position:relative;
+  top:-13rem;
+  color:#fff !important;
+  border-color: #fff !important;
+  background:transparent !important;
+  &:hover {
+    background: $red !important;
+    color: $white !important;
+    border-color: $red !important;
+  }
+}
+
 .article-h1 {
   //margin-left: 5%;
   padding-right: 5%;
+   @media screen and (max-width: 767px){
+    font-size: 2rem !important;
+    line-height: 1.3; 
+  }
 }
 
 .post-type-page .article-h1 {
@@ -91,6 +111,9 @@
   padding-bottom: 3rem;
   text-align: center;
   margin-top: 2rem;
+  @media screen and (max-width:767px) {
+    width: 100%;
+  }
 }
 
  .pricePoint-first {

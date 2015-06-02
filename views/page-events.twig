@@ -1,0 +1,45 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper animatedWrapper">
+		<article class="post-type-about" id="post-{{post.ID}}">
+			<section class="article-content">
+				<h1 class="article-h1"><a href="https://www.eventbrite.com/e/the-offline-society-launch-event-tickets-17200725834" target="_blank"><img src="{{site.url}}/img/opening_soiree.jpg" style="max-width:100%;margin-top:2rem" /></a></h1>
+				<a class="btn btn-primary" href="https://www.eventbrite.com/e/the-offline-society-launch-event-tickets-17200725834" target="_blank">RSVP on Eventbrite</a>
+				{% if user %}
+					<h6 style="padding-top:20px">As a member, you can use code "KnockKnock2015" on Eventbrite for a free ticket</h6>
+				{% else %}	
+				<h6 style="float:right;padding-right:50px">Want to attend free? <a href="{{site.url}}/join">Join</a> today</h6>
+				{% endif %}
+			
+				<!--<h1>Why Join?</h1>-->
+				<!--<div class="sectionHeader">Access to Offline Society Events</div>
+				<ul class="benefitList">
+					<li class="benefitList__benefit">Monthly themed parties complimentary for members</li>
+					<li class="benefitList__benefit">Invitations to premium experiences with a hand-picked group of members, carefully selected to mix well together at the event. And, if all goes well, beyond the event.</li>
+				</ul>
+
+				<div class="sectionHeader">The Offline Society Membership Card <span class="smallGray">(coming soon)</span></div>
+				<ul class="benefitList">
+					<li class="benefitList__benefit">Perks and surprises throughout the year</li>
+				</ul>
+
+				<div class="pricePoint pricePoint-first">
+					<div class="sectionHeader">Pay Monthly</div>
+					<h2>$19.99/month</h2>
+				</div>
+
+				<div class="pricePoint pricePoint-last">
+					<div class="sectionHeader">Pay Upfront</div>
+					<h2>15% discount</h2>
+				</div>
+				<div class="clearfix"></div>
+
+				<section class="center pricePointContain">
+					<a class="btn btn-primary" href="{{site.url}}/join/">Start your application today</a>
+				</section>-->
+				
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

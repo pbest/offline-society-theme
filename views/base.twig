@@ -27,9 +27,10 @@
 
 						<!-- Main Menu
     				–––––––––––––––––––––––––––––––––––––––––––––––––– -->	
-						
+						<div class="mobileHandle"><i class="ss-rows"></i></div>
+
 						<ul class="nav">
-						<div>
+						
 						{% block nav %} 
 						{% for item in menu.get_items %}
 							<li class="nav-item {{item.classes | join(' ')}}">
@@ -46,11 +47,11 @@
 							</li>
 						{% endfor %}
 						{% endblock %}
-						</div>	
+					
 
 						<!-- Right-side Menu (CTA)
     				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    				<div class="cta-wrapper">
+    				
     				{% block cta %}  
               {% if user %}
               {# They're a member!! #}
@@ -61,7 +62,7 @@
 										<i class="usr__menuIcon ss-icon ss-navigatedown red"></i>
 							  	</a>
 							  	<ul class="usr__dropdown">
-							  		<li class="usr__dropdownItem"><a href="#">Account</a>
+							  		<li class="usr__dropdownItem"><a href="{{site.url}}/events/">Events</a>
 							  		<li class="usr__dropdownItem"><a href="{{logout_url}}">Logout</a>
 							  	</ul>
 								</li>
@@ -71,7 +72,7 @@
 								<li class="cta"><a class="btn btn-secondary btn-signin" href="{{site.url}}/signin/">Sign In</a></li>
 							{% endif %}
 						{% endblock %}	
-						</div>
+						
 						</ul>
 					</nav><!-- #nav -->
 				

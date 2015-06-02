@@ -847,7 +847,7 @@ select {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   font-size: 1rem;
-  padding: 2.75rem 2rem;
+  padding: 2.5rem 2rem;
   /* The 6px vertically centers text on FF, ignored by Webkit */
   padding-bottom: 1.2rem;
   background-color: #F7F7F7;
@@ -1055,6 +1055,16 @@ PAGE HEADER
   top: 0;
   padding: 0;
   padding-top: 2rem; }
+  @media screen and (max-width: 767px) {
+    .header {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      float: left;
+      width: 100%;
+      margin-left: 0%;
+      text-align: center; } }
 
 /*
 Header Logo Block
@@ -1065,25 +1075,92 @@ Header Logo Block
   left: 5%;
   top: 2rem;
   width: 20%; }
+  @media screen and (max-width: 767px) {
+    .logo {
+      position: static;
+      margin: 0 auto;
+      width: 100%; } }
 
 .logo__image {
   width: 100%;
   max-width: 244px;
   height: auto; }
+  @media screen and (max-width: 767px) {
+    .logo__image {
+      padding-top: 15px;
+      max-width: 200px;
+      margin-left: -5px; } }
 
 /*
 Main Menu
 ---------------------------------------------- */
+.mobileHandle {
+  position: fixed;
+  top: -2px;
+  left: -2px;
+  color: #000000;
+  background: #FFFFFF;
+  border: 0px solid #e5e5e5;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  margin: 0; }
+  @media screen and (min-width: 768px) {
+    .mobileHandle {
+      display: none; } }
+
+.handleOpen {
+  background: #000;
+  color: #FFF;
+  transform: translateX(320%);
+  -webkit-transform: translateX(320%);
+  -ms-transform: translateX(320%);
+  transition: transform 0.3s ease-out;
+  -ms-transition: -ms-transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  height: 100%; }
+
 .nav {
   list-style: none; }
   .nav h1 {
     padding-top: 1.2rem; }
+  @media screen and (max-width: 767px) {
+    .nav {
+      position: fixed;
+      height: 100%;
+      background-color: #000000;
+      width: 40%;
+      left: 0;
+      top: 0;
+      z-index: 999999;
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      transition: transform 0.2s ease-out;
+      -webkit-transition: -webkit-transform 0.2s ease-out;
+      -ms-transition: -ms-transform 0.2s ease-out; } }
+
+.navOpen {
+  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transition: transform 0.2s ease-out;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -ms-transition: -ms-transform 0.2s ease-out; }
 
 .nav-item {
   display: inline-block;
   float: left;
   margin-right: 55px;
   list-style: none; }
+  @media screen and (max-width: 767px) {
+    .nav-item {
+      display: block;
+      margin-right: 0;
+      float: none;
+      text-align: left;
+      margin-left: 0; } }
 
 .nav-item a {
   font-family: "brandon-grotesque";
@@ -1095,6 +1172,13 @@ Main Menu
   line-height: 5.5rem; }
   .nav-item a:hover {
     color: #EB4147; }
+  @media screen and (max-width: 767px) {
+    .nav-item a {
+      color: #FFFFFF;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-left: 20px; } }
 
 @media screen and (max-width: 1023px) {
   .cta-wrapper {
@@ -1104,19 +1188,34 @@ Main Menu
     bottom: 20px;
     padding-right: 40px; } }
 
+@media screen and (max-width: 767px) {
+  .cta-wrapper {
+    display: none; } }
+
 .cta {
   float: right;
   position: relative;
   line-height: 5.5rem; }
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 767px) {
     .cta {
-      width: 50%;
-      padding-left: 20px;
-      padding-right: 20px; }
+      width: 100%;
+      padding-left: 0px;
+      padding-right: 20px;
+      margin: 0;
+      margin-top: 20px;
+      float: left; }
       .cta a {
-        width: 100%; } }
+        width: 100%;
+        margin-right: 20px; }
+      .cta .btn-secondary {
+        color: #FFFFFF;
+        margin-top: 0px;
+        display: block; } }
   .cta .btn {
     margin-left: 15px; }
+    @media screen and (max-width: 767px) {
+      .cta .btn {
+        margin-left: 0; } }
 
 /*
 User Button and Dropdown for logged in users
@@ -1524,7 +1623,6 @@ TOOL-TIPS
   width: 50%; }
 
 .gform_page_footer {
-  width: 100%;
   clear: both;
   margin-top: 4rem; }
 
@@ -1651,10 +1749,23 @@ USER REGISTRATION FORM
 -------------------------------------------------
 MEMBERSHIP APPLICATION FORM
 ------------------------------------------------- */
+#gform_submit_button_4 {
+  background: #EB4147;
+  color: #FFFFFF;
+  border-color: #EB4147; }
+
 #gform_4 .gform_body {
-  width: 74%;
+  width: 75%;
   margin-top: 1rem;
   padding-bottom: 1rem; }
+  @media screen and (max-width: 767px) {
+    #gform_4 .gform_body {
+      width: 100%; }
+      #gform_4 .gform_body li {
+        margin-left: 0; } }
+
+.gform_previous_button {
+  margin-left: 20px; }
 
 .name_first input, .name_last input {
   width: 100%; }
@@ -1662,12 +1773,19 @@ MEMBERSHIP APPLICATION FORM
 .name_first, .name_last {
   float: left;
   width: 50%; }
+  @media screen and (max-width: 767px) {
+    .name_first, .name_last {
+      width: 100%; } }
 
 label.gfield_label[for=input_1_3_3], label.gfield_label[for=input_1_2] {
   display: none; }
 
 .name_first {
-  padding-right: 2rem; }
+  margin-bottom: 2rem; }
+  @media screen and (min-width: 768px) {
+    .name_first {
+      padding-right: 2rem;
+      margin-bottom: 0; } }
 
 .name-last {
   padding-left: 50px; }
@@ -1681,11 +1799,18 @@ label.gfield_label[for=input_1_3_3], label.gfield_label[for=input_1_2] {
 .ginput_left, .ginput_right {
   float: left;
   width: 50%; }
+  @media screen and (max-width: 767px) {
+    .ginput_left, .ginput_right {
+      width: 100%; } }
 
 .ginput_left {
   padding-right: 2rem; }
   .ginput_left input {
     width: 100%; }
+  @media screen and (max-width: 767px) {
+    .ginput_left {
+      padding-right: 0;
+      margin-bottom: 2rem; } }
 
 .ginput_right input {
   width: 100%; }
@@ -1712,6 +1837,13 @@ label.gfield_label[for=input_1_3_3], label.gfield_label[for=input_1_2] {
   color: #ccc;
   padding-bottom: 1rem;
   margin-bottom: 1rem; }
+  @media screen and (max-width: 767px) {
+    .gf_step {
+      width: 33%; } }
+
+@media screen and (max-width: 767px) {
+  #gf_step_4_4 {
+    width: 0; } }
 
 .gf_step_clear {
   display: inline-block; }
@@ -1751,6 +1883,9 @@ label.gfield_label[for=input_1_3_3], label.gfield_label[for=input_1_2] {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px; }
+  @media screen and (max-width: 767px) {
+    .gf_step_name {
+      display: none; } }
 
 .gf_step_account {
   margin-left: -23px; }
@@ -1791,11 +1926,63 @@ label.gfield_label[for=input_1_3_3], label.gfield_label[for=input_1_2] {
   display: inline;
   opacity: 1; }
 
+/* Page 1 - Account
+------------------------------------------------- */
+#field_4_10 {
+  position: relative;
+  width: 50%;
+  float: left; }
+  #field_4_10 .ginput_container label {
+    display: none; }
+  @media screen and (max-width: 767px) {
+    #field_4_10 {
+      width: 100%; } }
+
+@media screen and (max-width: 767px) {
+  #field_4_12 {
+    clear: both; } }
+
+#field_4_10 > label {
+  position: absolute;
+  top: .5rem;
+  left: 2rem; }
+
+#input_4_10 .ginput_container {
+  float: left;
+  width: 31%; }
+  @media screen and (max-width: 767px) {
+    #input_4_10 .ginput_container {
+      width: 33%; } }
+  #input_4_10 .ginput_container input {
+    width: 100%; }
+    #input_4_10 .ginput_container input:focus, #input_4_10 .ginput_container input:active {
+      border-color: #f7f7f7; }
+  #input_4_10 .ginput_container:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+
+#input_4_10_1 {
+  padding-right: 1rem; }
+
+#input_4_10_2 {
+  padding-left: .5rem;
+  padding-right: .5rem; }
+
+#input_4_10_3 {
+  padding-left: .5rem; }
+
 /* Page 2 - Dating Preferences
 ------------------------------------------------- */
 #gform_page_4_2 .gfield {
   width: 50%;
   float: left; }
+  @media screen and (max-width: 767px) {
+    #gform_page_4_2 .gfield {
+      width: 100%; } }
 
 #gform_page_4_2 .gfield_label {
   font-weight: 600;
@@ -1804,6 +1991,9 @@ label.gfield_label[for=input_1_3_3], label.gfield_label[for=input_1_2] {
   font-size: .75rem;
   color: #EB4147;
   margin-bottom: 0; }
+  @media screen and (max-width: 767px) {
+    #gform_page_4_2 .gfield_label {
+      font-size: 1rem; } }
 
 #gform_page_4_2 #field_4_20 {
   width: 75%;
@@ -1857,10 +2047,12 @@ label.gfield_label[for=input_1_3_3], label.gfield_label[for=input_1_2] {
   margin-top: 20px; }
 
 .ginput_cardinfo_right {
+  position: relative;
   padding-left: 4rem;
-  width: 60%;
+  width: 70%;
   float: left;
-  text-align: right; }
+  text-align: right;
+  margin-top: 2rem; }
 
 .ginput_cardinfo_right:after {
   visibility: hidden;
@@ -1914,17 +2106,28 @@ label[for=input_4_22_2_month] {
   left: 1.3rem;
   top: 45px;
   font-size: 10px; }
+  @media screen and (max-width: 767px) {
+    #field_4_33 label {
+      top: 7px;
+      left: 16px; } }
 
 #field_4_33 {
   float: left;
   width: 35%;
   padding-top: 40px; }
+  @media screen and (max-width: 767px) {
+    #field_4_33 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      float: left;
+      width: 100%;
+      padding: 0; } }
 
 #gf_coupon_code_4 {
-  padding: 1.75rem;
-  padding-left: 1.45rem;
-  padding-top: 2.75rem;
-  width: 65%; }
+  width: 62%;
+  padding: 2rem 1.25rem 0.9rem 1.45rem; }
 
 .gform_wrapper input#gf_coupon_button.button {
   height: 4.5rem;
@@ -1949,6 +2152,37 @@ label[for=input_4_22_2_month] {
 #field_4_30 {
   clear: both;
   width: 100%; }
+
+#input_4_22 .ginput_full {
+  display: block; }
+
+label.gfield_label[for=input_4_22_1] {
+  display: none; }
+
+#input_4_22_2_container:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+#gform_submit_button_4 {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.ginput_card_expiration {
+  height: 45px; }
+
+#input_4_22_2_cardinfo_right label {
+  position: absolute;
+  right: 17%;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #EB4147;
+  text-transform: uppercase;
+  font-size: 12px;
+  top: 7px; }
 
 /* Pretty Radio Options
 ------------------------------------------------- */
@@ -1994,6 +2228,10 @@ label[for=input_4_22_2_month] {
     padding-top: 3px;
     transform: scale(0.8);
     transition: all 0.2s; }
+    @media screen and (max-width: 767px) {
+      .field__radio [type="radio"]:not(:checked) + label:before,
+      .field__radio [type="radio"]:checked + label:before {
+        padding-top: 5px; } }
   .field__radio [type="radio"]:checked + label:before {
     content: '\002713';
     font-family: "SSStandard" !important;
@@ -2050,6 +2288,10 @@ label[for=input_4_22_2_month] {
     padding-top: 3px;
     transform: scale(0.8);
     transition: all 0.2s; }
+    @media screen and (max-width: 767px) {
+      .field__checkbox [type="checkbox"]:not(:checked) + label:before,
+      .field__checkbox [type="checkbox"]:checked + label:before {
+        padding-top: 5px; } }
   .field__checkbox [type="checkbox"]:checked + label:before {
     content: '\002713';
     font-family: "SSStandard" !important;
@@ -2318,13 +2560,15 @@ label[for=user_login], label[for=user_pass] {
 
 .landing__block {
   width: 50%;
-  height: 100%;
   float: left;
   text-align: center;
   position: relative; }
   @media screen and (max-width: 1023px) {
     .landing__block {
       width: 100%; } }
+  @media screen and (min-width: 1024px) {
+    .landing__block {
+      height: 100%; } }
 
 @media screen and (min-width: 1024px) {
   .landing__center {
@@ -2342,23 +2586,28 @@ label[for=user_login], label[for=user_pass] {
   overflow: hidden;
   background-color: #ccc; }
 
-.full_video {
-  position: absolute;
-  top: 0;
-  left: -40%;
-  width: auto;
-  height: 100%;
-  object-fit: cover; }
+@media screen and (min-width: 1023px) {
+  .full_video {
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: auto;
+    height: 100%;
+    object-fit: cover; } }
 
 .landing__logo {
   width: 53%;
   max-width: 384px; }
   @media screen and (max-width: 1023px) {
     .landing__logo {
-      margin-top: 6rem; } }
+      margin-top: 3rem; } }
 
 .landing__taglineBlock {
   margin-top: 4rem; }
+  @media screen and (max-width: 1023px) {
+    .landing__taglineBlock {
+      margin-top: 2rem;
+      padding-bottom: 4rem; } }
 
 .landing__tagline {
   font-weight: 300;
@@ -2368,6 +2617,11 @@ label[for=user_login], label[for=user_pass] {
   margin-right: auto;
   margin-left: auto;
   max-width: 65%; }
+  @media screen and (max-width: 1023px) {
+    .landing__tagline {
+      font-size: 1.4rem;
+      line-height: 1.6;
+      max-width: 75%; } }
 
 .landing__taglinesubLink {
   color: #7d7d7d;
@@ -2395,6 +2649,10 @@ label[for=user_login], label[for=user_pass] {
   color: #ccc;
   font-size: 12px;
   opacity: 0; }
+  @media screen and (max-width: 767px) {
+    .home .nav-item a {
+      opacity: 1;
+      color: #FFFFFF; } }
 
 @media screen and (min-width: 1024px) {
   .home .nav .btn-secondary {
@@ -2424,10 +2682,14 @@ label[for=user_login], label[for=user_pass] {
 
 .content-wrapper {
   margin-left: 30%;
-  padding-top: 10rem; }
+  padding-top: 10rem;
+  margin-right: 40px; }
   @media screen and (max-width: 1023px) {
     .content-wrapper {
       margin-left: 17%; } }
+  @media screen and (max-width: 767px) {
+    .content-wrapper {
+      margin-left: 50px; } }
 
 .smallGray {
   color: #ccc;
@@ -2435,8 +2697,23 @@ label[for=user_login], label[for=user_pass] {
   padding-left: 3px;
   padding-right: 3px; }
 
+.RSVP_event {
+  position: relative;
+  top: -13rem;
+  color: #fff !important;
+  border-color: #fff !important;
+  background: transparent !important; }
+  .RSVP_event:hover {
+    background: #EB4147 !important;
+    color: #FFFFFF !important;
+    border-color: #EB4147 !important; }
+
 .article-h1 {
   padding-right: 5%; }
+  @media screen and (max-width: 767px) {
+    .article-h1 {
+      font-size: 2rem !important;
+      line-height: 1.3; } }
 
 @media screen and (min-width: 1024px) {
   .post-type-page .article-h1 {
@@ -2493,6 +2770,9 @@ label[for=user_login], label[for=user_pass] {
   padding-bottom: 3rem;
   text-align: center;
   margin-top: 2rem; }
+  @media screen and (max-width: 767px) {
+    .pricePoint {
+      width: 100%; } }
 
 .pricePoint-first {
   margin-right: 2.5%; }

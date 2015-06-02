@@ -14,12 +14,15 @@
 
 .landing__block {
   width: 50%;
-  height: 100%;
+  
   float: left;
   text-align: center;
   position: relative;
   @media screen and (max-width:1023px) {
     width: 100%;
+  }
+  @media screen and (min-width:1024px) {
+    height: 100%;
   }
 }
 
@@ -44,6 +47,7 @@
 }
 
 .full_video {
+  @media screen and (min-width:1023px) {
   position: absolute;
   top: 0;
   left: -40%;
@@ -51,17 +55,22 @@
   height: 100%;
   object-fit: cover;
 }
+}
 
 .landing__logo {
   width: 53%;
   max-width: 384px;
   @media screen and (max-width:1023px) {
-    margin-top: 6rem;
+    margin-top: 3rem;
   }
 }
 
 .landing__taglineBlock {
   margin-top: 4rem;
+  @media screen and (max-width:1023px) {
+    margin-top: 2rem;
+    padding-bottom: 4rem;
+  }
 
 }
 
@@ -73,6 +82,11 @@
   margin-right: auto;
   margin-left: auto;
   max-width: 65%;
+  @media screen and (max-width:1023px) {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    max-width: 75%;
+  }
 }
 
 .landing__taglinesubLink {
@@ -106,6 +120,10 @@
      color: #ccc;
      font-size: 12px;
      opacity: 0;
+     @media screen and (max-width:767px) {
+      opacity: 1;
+      color: $white;
+     }
   }
 
   .nav .btn-secondary {

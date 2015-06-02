@@ -12,6 +12,12 @@ PAGE HEADER
  // background: $white;
  padding: 0;
  padding-top: 2rem;
+
+ @media screen and (max-width: 767px) {
+  @include span(100);
+  @include prefix(0);
+  text-align: center;
+ }
 }
 
 
@@ -24,12 +30,22 @@ Header Logo Block
   left: 5%;
   top: 2rem;
   width: 20%;
+  @media screen and (max-width: 767px) {
+    position: static;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 .logo__image {
   width: 100%;
   max-width: 244px;
   height: auto;
+  @media screen and (max-width: 767px) {
+    padding-top: 15px;
+    max-width: 200px;
+    margin-left: -5px;
+  }
 }
 
 
@@ -37,6 +53,34 @@ Header Logo Block
 /*
 Main Menu
 ---------------------------------------------- */
+.mobileHandle {
+  position: fixed;
+  top: -2px;
+  left: -2px;
+  color: $black;
+  background: $white;
+  border: 0px solid $gray;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  margin: 0;
+  @media screen and (min-width: 768px) { 
+    display: none;
+  }
+}
+
+.handleOpen {
+   background: #000;
+  color: #FFF;
+  transform: translateX(320%);
+  -webkit-transform: translateX(320%);
+  -ms-transform: translateX(320%);
+  transition: transform .3s ease-out;
+  -ms-transition: -ms-transform .3s ease-out;
+   -webkit-transition: -webkit-transform .2s ease-out;
+  height: 100%;
+}
 
 .nav {
   list-style: none;
@@ -44,6 +88,32 @@ Main Menu
   h1 {
     padding-top: 1.2rem;
   }
+
+  @media screen and (max-width:767px) {
+    position: fixed;
+    height: 100%;
+    background-color: $black;
+    width: 40%;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transition: transform .2s ease-out;
+    -webkit-transition: -webkit-transform .2s ease-out;
+    -ms-transition: -ms-transform .2s ease-out;
+
+  }
+}
+
+.navOpen {
+   transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transition: transform .2s ease-out;
+    -webkit-transition: -webkit-transform .2s ease-out;
+    -ms-transition: -ms-transform .2s ease-out;
 }
 
 .nav-item {
@@ -51,6 +121,13 @@ Main Menu
   float: left;
   margin-right: 55px;
   list-style: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-right: 0;
+    float: none;
+    text-align: left;
+    margin-left: 0;
+  }
 }
 
 .nav-item a {
@@ -60,6 +137,14 @@ Main Menu
 
   &:hover {
     color: $red;
+  }
+
+  @media screen and (max-width: 767px) { //temporary
+   color: $white;
+   display: block;
+   width: 100%;
+   height: 100%;
+   padding-left: 20px;
   }
 }
 
@@ -72,6 +157,9 @@ Main Menu
       padding-right: 40px;
 
     }
+    @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .cta {
@@ -79,21 +167,30 @@ Main Menu
   position: relative;
   line-height: 5.5rem;
 
-  @media screen and (max-width:1023px) {
-     width: 50%;
-     padding-left: 20px;
+  @media screen and (max-width:767px) {
+     width: 100%;
+     padding-left: 0px;
      padding-right: 20px;
-     // float: left;
-     // position: absolute;
-     // bottom: 20px;
+     margin: 0;
+     margin-top: 20px;
+     float: left; 
      a {
       width: 100%;
+      margin-right: 20px;
+     }
+
+     .btn-secondary {
+      color: $white;
+      margin-top: 0px;
+      display: block;
      }
     } 
 
   .btn {
     margin-left: 15px;
-
+    @media screen and (max-width:767px) {
+      margin-left: 0;
+    }
   }
 }
 

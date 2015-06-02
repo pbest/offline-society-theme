@@ -50,4 +50,8 @@ var myRevealingModule = (function () {
  
  $(document).ready(function(){
  // myRevealingModule.start();
+ $('.mobileHandle').click(function(){
+    $('.nav').toggleClass('navOpen');
+    //$(this).toggleClass('handleOpen');
+  });
 });
