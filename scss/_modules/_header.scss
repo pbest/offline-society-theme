@@ -70,6 +70,15 @@ Main Menu
   }
 }
 
+.mobileClose {
+  color: $white;
+  position: absolute; bottom: 20px;
+}
+
+.page-template-template-join .mobileHandle {
+  display: none;
+}
+
 .handleOpen {
    background: #000;
   color: #FFF;
@@ -93,7 +102,7 @@ Main Menu
     position: fixed;
     height: 100%;
     background-color: $black;
-    width: 40%;
+    width: 45%;
     left: 0;
     top: 0;
     z-index: 999999;

@@ -574,6 +574,10 @@ input[type=text], input[type=tel] {
   width: 30%;
   background-color: #F7F7F7;
   margin-top: 20px;
+
+  @media screen and (max-width:767px) {
+    width: 40%;
+  }
 }
 
 .ginput_cardinfo_right {
@@ -618,9 +622,13 @@ input[type=text], input[type=tel] {
 #gform_fields_4_3, #gform_fields_4_3_column-2 {
   width: 100%;
   overflow: auto;
+
   .gfield {
     width: 50%;
     float: left;
+    @media screen and (max-width:767px) {
+      width: 100% !important;
+    }
   }
 }
 
@@ -748,13 +756,26 @@ label.gfield_label[for=input_4_22_1] {
 
 #input_4_22_2_cardinfo_right label {
   position: absolute;
-  right: 17%;
+  right: 16%;
   font-weight: 600;
   letter-spacing: 1px;
   color: #EB4147;
   text-transform: uppercase;
   font-size: 12px;
   top: 7px;
+}
+
+#field_4_46 {
+  margin-bottom: -30px;
+  color: #ccc;
+}
+
+#gform_previous_button_4 {
+  margin-left: 0;
+}
+#gform_previous_button_4_6 {
+  position: relative;
+  left: -20px;
 }
 
 /* Pretty Radio Options
